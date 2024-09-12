@@ -14,7 +14,7 @@ class OrderLocators:
     RENTAL_DATA = By.XPATH, "//input[@type='text' and @placeholder='* Когда привезти самокат']"
     RENTAL_PERIOD = By.XPATH, "//div[text()='* Срок аренды']"
     COLOR_SCOOTER = By.XPATH, "//input[@id='black']"
-    BUTTON_ORDER_END = By.XPATH, "//button[text()='Заказать' and @class='Button_Button__ra12g Button_Middle__1CSJM']"
+    BUTTON_ORDER_END = By.XPATH, "//button[contains(@class, 'Button_Middle') and text()='Заказать']"
     BUTTON_ORDER_YES = By.XPATH, "//button[text()='Да']"
     ORDER_DONE = By.XPATH, "//div[text()='Заказ оформлен']"
     MAIN_LOGO = By.XPATH, "//img[@alt='Scooter']"
@@ -22,4 +22,5 @@ class OrderLocators:
     LOGO_YANDEX = By.XPATH, "//img[@alt='Yandex']"
     BUTTON_CHECK_STATUS = By.XPATH, "//button[text()='Посмотреть статус']"
     SCOOTER_DONE = By.XPATH, "//div[text()='Самокат на складе']"
+
 

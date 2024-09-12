@@ -48,7 +48,7 @@ class SectionOrder:
 
     def set_rental_data(self):
         self.driver.find_element(*self.rental_data).click()
-        self.driver.find_element(By.XPATH, "//div[@aria-label='Choose воскресенье, 6-е октября 2024 г.']").click()
+        self.driver.find_element(By.XPATH, "//div[@class='react-datepicker__day react-datepicker__day--003 react-datepicker__day--outside-month']").click()
 
     def set_rental_period(self):
         self.driver.find_element(*self.rental_period).click()
@@ -63,7 +63,7 @@ class SectionOrder:
     def click_button_order_yes(self):
         self.driver.find_element(*self.button_order_yes).click()
         self.driver.find_element(*self.button_check_status).click()
-        WebDriverWait(self.driver, 3).until(EC.visibility_of_element_located(self.scooter_done))
+        WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.scooter_done))
 
     def click_main_page(self):
         self.driver.find_element(*self.main_logo).click()
